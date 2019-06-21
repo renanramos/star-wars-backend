@@ -2,7 +2,7 @@ const _config = {
     host: 'localhost',
     user: 'root',
     port: 3306,
-    password: 'password',
+    password: '123@mudar',
     database: 'sw-portal'
 }
 

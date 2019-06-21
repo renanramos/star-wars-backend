@@ -19,7 +19,7 @@ app.use((req, res, next)=>{
 app.get('/', (req, res) => res.send('App Star Wars'))
 
 app.post('/api/users', (req, res) => {
-    let user = req.body
+    let user = req.body    
     mod.login(user, (data)=>{
         res.json(data)
         res.status(200)
