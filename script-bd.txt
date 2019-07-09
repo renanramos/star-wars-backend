@@ -6,7 +6,7 @@ CREATE TABLE `my-db`.`user` (
   
 	`user_age` int(11) NOT NULL,
   
-	`user_lastname` varchar(45) NOT NULL,
+	`user_password` varchar(45) NOT NULL,
   
 	PRIMARY KEY (`user_id`),
   
@@ -16,8 +16,8 @@ CREATE TABLE `my-db`.`user` (
 
 
 
-INSERT INTO `sw-portal`.`user`(user_id, user_name, user_password) values(1, "admin", "admin");
+INSERT INTO `my-db`.`user`(user_id, user_name, user_password) values(1, "admin", "admin");
 
 
 
-SELECT * FROM `sw-portal`.`user`
+SELECT * FROM `my-db`.`user`
