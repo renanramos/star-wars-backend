@@ -1,4 +1,4 @@
-const mysql = require('mysql')
+    const mysql = require('mysql')
 const db = require('./../db/config')
 const constants = require('./../consts/consts')
 
@@ -8,7 +8,7 @@ const _getConnection = () => {
 
 const _loginUser = (user, callback) =>{
     let conn = _getConnection()
-    conn.query(constants.login_sql, [user.name, user.password], (error, results, fields) => {
+    conn.query(constants.login_sql, [user.username, user.password], (error, results, fields) => {
         if(error) throw error
         callback(results)
     })
