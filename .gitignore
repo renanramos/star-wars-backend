@@ -1,6 +1,7 @@
 # Files
 package-lock.json
 db/config.js
+.env
 
 # Folders
 node_modules/

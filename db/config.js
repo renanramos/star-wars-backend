@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 const _config = {
-    host: 'localhost',
-    user: 'root',
-    port: 3306,
-    password: '123@mudar',
-    database: 'sw-portal'
+    host: process.env.HOST,
+    user: process.env.USER,
+    port: process.env.DB_PORT,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
 }
 
 module.exports = {
