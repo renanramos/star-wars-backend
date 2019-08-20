@@ -3,13 +3,12 @@ const router = express.Router()
 const mod = require('./../module/module-mysql')
 
 router.get('/login', (req,res) => {        
-    let user = req.query
-    mod.login(user, (data)=>{
-        if(data[0]){            
-            res.status(200).json(data[0])
+    let user = req.query;
+    mod.login(user, (data) => {
+        if(!data.status){            
+            res.status(200).json(data);
         }else{
-            res.json({ response: {error: '404', message: 'Usuário não encontrado!'}})
-            res.status(404)
+            res.status(404).json({ response: {error: '404', message: 'Usuário não encontrado!'}});
         }
     });
 });
