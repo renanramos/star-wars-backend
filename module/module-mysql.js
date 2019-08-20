@@ -8,9 +8,13 @@ const _getConnection = () => {
 
 const _loginUser = (user, callback) =>{
     let conn = _getConnection()
-    conn.query(constants.login_sql, [user.username, user.password], (error, result, fields) => {
+    conn.query(constants.login_sql, [user.username, user.password], (error, result, fields) => {        
         if(error) console.log(error)
-        callback(result)
+        if (Object.keys(result).length === 0){
+            callback(JSON.stringify({ "status": 404, "message": "Usuário não encontrado" }))
+        } else {
+            callback(JSON.stringify(result))
+        }
     })
     conn.end()
 }
