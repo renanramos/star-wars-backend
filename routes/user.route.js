@@ -6,7 +6,7 @@ router.get('/login', (req,res) => {
     let user = req.query;
     mod.login(user, (data) => {
         if(!data.status){            
-            res.status(200).json(data);
+            res.status(200).json(JSON.parse(data));
         }else{
             res.status(404).json({ response: {error: '404', message: 'Usuário não encontrado!'}});
         }

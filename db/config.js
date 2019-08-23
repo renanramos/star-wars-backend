@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const _config = {
     host: process.env.HOST,
     user: process.env.USER,
