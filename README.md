@@ -12,16 +12,22 @@ Desta forma será instaladas as dependências do projeto.
 
 ### configuração do banco de dados
 
-O projeto foi desenvolvido utilizando como database o <b> Mysql 8.0.17 </b>.
+O projeto foi desenvolvido utilizando como database o <b> Mysql 8.0.17 </b>.</br>
 Abaixo segue o script de criação da tabela e campos.
 
 <code>
-    CREATE TABLE `my-db`.`user` (    
-        `user_id` int(11) NOT NULL AUTO_INCREMENT,    
-        `user_name` varchar(45) NOT NULL,        
+    CREATE TABLE `my-db`.`user` (
+    
+        `user_id` int(11) NOT NULL AUTO_INCREMENT,
+        
+        `user_name` varchar(45) NOT NULL,       
+        
         `user_password` varchar(45) NOT NULL,    
+        
         PRIMARY KEY (`user_id`),
+        
         UNIQUE KEY `user_id_UNIQUE` (`user_id`)
+        
     ) ;
 </code>
 
