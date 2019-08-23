@@ -11,11 +11,3 @@ CREATE TABLE `my-db`.`user` (
 	UNIQUE KEY `user_id_UNIQUE` (`user_id`)
 
 ) ;
-
-
-
-INSERT INTO `my-db`.`user`(user_id, user_name, user_password) values(1, "admin", "admin");
-
-
-
-SELECT * FROM `my-db`.`user`
